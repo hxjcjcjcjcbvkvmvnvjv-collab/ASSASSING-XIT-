@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>𝟔:𝟔𝟔 𝐀𝐒𝐒𝐀𝐒𝐒𝐈𝐍𝐆👹</title>
+
+<style>
+body{
+    margin:0;
+    overflow:hidden;
+    background:#000;
+    font-family:Arial, sans-serif;
+}
+
+/* Canvas */
+#particles{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:0;
+}
+
+/* Panel */
+.panel{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:380px;
+    background:#0a0f2c;
+    padding:20px;
+    border-radius:20px;
+    border:2px solid #00f0ff;
+    box-shadow:0 0 25px #00f0ff55;
+    color:white;
+    z-index:1;
+}
+
+/* Tabs */
+.tabs{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:6px;
+}
+
+.tabs button{
+    padding:8px;
+    border:none;
+    border-radius:8px;
+    background:#111;
+    color:white;
+    font-size:12px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.tabs button.activo{
+    background:#00f0ff;
+    color:black;
+}
+
+/* Secciones */
+.section{
+    display:none;
+    margin-top:15px;
+    font-size:13px;
+}
+
+.section.active{
+    display:block;
+}
+
+.section.red{
+    border:1px solid #ff0033;
+    box-shadow:0 0 15px #ff003355 inset;
+    padding:10px;
+    border-radius:10px;
+}
+
+.section.blue{
+    border:1px solid #00f0ff;
+    box-shadow:0 0 15px #00f0ff33 inset;
+    padding:10px;
+    border-radius:10px;
+}
+
+label{
+    display:block;
+    margin:6px 0;
+    cursor:pointer;
+}
+
+/* VIP radios */
+.vip-options input{
+    margin-right:6px;
+}
+
+/* Campo avanzado */
+textarea{
+    width:100%;
+    height:70px;
+    background:#111;
+    color:#00f0ff;
+    border:1px solid #00f0ff55;
+    border-radius:8px;
+    padding:6px;
+    resize:none;
+}
+
+select{
+    width:100%;
+    margin-top:6px;
+    padding:6px;
+    background:#111;
+    color:white;
+    border-radius:6px;
+}
+
+/* Botón */
+.inyector{
+    margin-top:15px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#00f0ff;
+    font-weight:bold;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+<div class="panel">
+<h2 style="text-align:center;">𝟔:𝟔𝟔 𝐀𝐒𝐒𝐀𝐒𝐒𝐈𝐍𝐆👹</h2>
+
+<div class="tabs">
+<button class="tabBtn activo" data-tab="xit">XITADO</button>
+<button class="tabBtn" data-tab="opti">OPTIMIZADO</button>
+<button class="tabBtn" data-tab="dominio">666 DOMINIO</button>
+<button class="tabBtn" data-tab="vip">VIP 2.0</button>
+</div>
+
+<!-- XITADO -->
+<div class="section active blue" id="xit">
+<label><input type="checkbox"> HEAD SENSIX</label>
+<label><input type="checkbox"> INYECT HEAD-TRICK</label>
+<label><input type="checkbox"> NO RECOIL X2</label>
+<label><input type="checkbox"> HEAD-TRACKING 𝟔:𝟔𝟔</label>
+</div>
+
+<!-- OPTIMIZADO -->
+<div class="section blue" id="opti">
+<label><input type="checkbox"> Modo Rendimiento Extremo</label>
+<label><input type="checkbox"> Reducción de Animaciones</label>
+<label><input type="checkbox"> Boost FPS Visual</label>
+<label><input type="checkbox"> Limpieza Cache Temporal</label>
+<label><input type="checkbox"> Prioridad Alta CPU</label>
+</div>
+
+<!-- 666 DOMINIO -->
+<div class="section red" id="dominio">
+<label><input type="checkbox"> Modo Rojo Intenso</label>
+<label><input type="checkbox"> Preset Precisión Máxima</label>
+<label><input type="checkbox"> Estabilidad Total</label>
+<label><input type="checkbox"> Respuesta Instantánea</label>
+<label><input type="checkbox"> Sincronización Ultra</label>
+</div>
+
+<!-- VIP -->
+<div class="section blue" id="vip">
+<div class="vip-options">
+<label><input type="radio" name="zona"> CABEZA</label>
+<label><input type="radio" name="zona"> PECHO</label>
+<label><input type="radio" name="zona"> PIE</label>
+</div>
+
+<select>
+<option>Seleccionar tipo de texto</option>
+<option>XML</option>
+<option>JSON</option>
+<option>TXT</option>
+<option>SETEDIT</option>
+</select>
+
+<textarea placeholder="Agrega tu texto o código aquí..."></textarea>
+</div>
+
+<button class="inyector" onclick="abrirFreeFire()">INYECTADOR XIT 🚀</button>
+
+</div>
+
+<script>
+// Tabs
+document.querySelectorAll(".tabBtn").forEach(btn=>{
+btn.addEventListener("click",()=>{
+document.querySelectorAll(".tabBtn").forEach(b=>b.classList.remove("activo"));
+document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));
+btn.classList.add("activo");
+document.getElementById(btn.dataset.tab).classList.add("active");
+});
+});
+
+// Abrir Free Fire
+function abrirFreeFire(){
+const freeFireUri = 'freefireth://';
+window.location.href = freeFireUri;
+}
+
+// Fondo partículas
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+for(let i=0;i<100;i++){
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height*0.6,
+size:Math.random()*2+1,
+speed:Math.random()*1.5+0.5,
+drift:(Math.random()-0.5)*0.3
+});
+}
+
+function animate(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+particles.forEach(p=>{
+ctx.fillStyle="rgba(0,240,255,0.8)";
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+ctx.fill();
+p.y+=p.speed;
+p.x+=p.drift;
+if(p.y>canvas.height){
+p.y=Math.random()*canvas.height*0.2;
+p.x=Math.random()*canvas.width;
+}
+});
+requestAnimationFrame(animate);
+}
+animate();
+
+window.addEventListener("resize",()=>{
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+});
+</script>
+
+</body>
+</html>
